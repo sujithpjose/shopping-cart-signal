@@ -1,0 +1,33 @@
+<section class="cart-list">
+    <div class="list-header">
+        <h3 class="list-header__title">Shopping Cart</h3>
+        <h3 class="list-header__count">{{items.length}} items</h3>
+    </div>
+    <div class="list-item" *ngFor="let item of items">
+        <div class="list-item__img">
+            <img [src]="item.imgUrl" />
+        </div>
+        <div class="list-item__main">
+            <span class="list-item__main__heading">{{item.name}}</span>
+            <span>{{item.description}}</span>
+            <span>Size : S</span>
+            <span>In Stock</span>
+        </div>
+        <div class="list-item__price">
+            <span>Each</span>
+            <span>₹ {{item.unitPrice}}</span>
+        </div>
+        <div class="list-item__qty">
+            <select (ngModelChange)="onQtyChange($event,item)" [ngModel]="item.quantity">
+                <option *ngFor="let i of [1,2,3,4,5]" [value]="i">
+                    {{i}}
+                </option>
+            </select>
+        </div>
+        <div class="list-item__sum">
+            <span>Total</span>
+            <span>₹ {{item.quantity * item.unitPrice }}</span>
+        </div>
+
+    </div>
+</section>

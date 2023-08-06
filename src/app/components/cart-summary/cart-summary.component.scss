@@ -1,0 +1,22 @@
+:host {
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.cart-summary {
+    flex-direction: column;
+    flex: 1;
+    padding: 0 24px;
+    &__header{
+        border-bottom: 1px solid #a1a1a1;
+    }
+    &__content{
+        flex-direction: column;
+        &__text {
+            line-height: 17px;
+            margin-top: 8px;
+        }
+    }
+}

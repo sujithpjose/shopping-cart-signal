@@ -1,0 +1,8 @@
+<section class="container">
+    <article class="container__list">
+        <app-cart-list (qtyChanged)="onQtyChanged($event)" [items]="$cartList()"></app-cart-list>
+    </article>
+    <article class="container__summary">
+        <app-cart-summary [total]="$cartTotal()"></app-cart-summary>
+    </article>
+</section>

@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pxs;
+    color: #a1a1a1;
+}
+
+section , div , article {
+    display: flex;
+}
+

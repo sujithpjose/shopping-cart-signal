@@ -1,0 +1,9 @@
+.container{
+    flex: 1;
+    &__list {
+        flex: .7;
+    }
+    &__summary {
+        flex: .3;
+    }
+}
